@@ -3,6 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { PostModule } from './post/post.module';
+import { FeedbackModule } from './feedback/feedback.module';
+import { RatingModule } from './rating/rating.module';
+import { TagModule } from './tag/tag.module';
 
 @Module({
   imports: [
@@ -17,6 +21,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       synchronize: true,
     }),
     UserModule,
+    PostModule,
+    FeedbackModule,
+    RatingModule,
+    TagModule,
   ],
   controllers: [AppController],
   providers: [AppService],
